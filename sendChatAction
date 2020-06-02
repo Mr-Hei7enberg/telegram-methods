@@ -1,0 +1,11 @@
+function sendChatAction(chat_id, action){
+    var data = {
+    method: "post",
+    payload: {
+      method: "sendChatAction",
+      chat_id: String(chat_id),
+      action: String(action)
+    }
+  };
+  UrlFetchApp.fetch('https://api.telegram.org/bot' + token + '/', data);
+}
